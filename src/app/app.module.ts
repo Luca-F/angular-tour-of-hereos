@@ -2,10 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
+import { HereosComponent } from './hereos/hereos.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HereosComponent
   ],
   imports: [
     BrowserModule
