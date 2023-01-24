@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import {Hero} from '../hero';
+import { Hero } from '../hero';
 
 @Component({
-  selector: 'app-hereos',
-  templateUrl: './hereos.component.html',
-  styleUrls: ['./hereos.component.css']
+  selector: 'app-heroes',
+  templateUrl: './heroes.component.html',
+  styleUrls: ['./heroes.component.css']
 })
-export class HereosComponent {
-  hero: Hero ={
+export class HeroesComponent {
+  hero: Hero = {
     id: 1,
     name: 'Windstorm'
   };
