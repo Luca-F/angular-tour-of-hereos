@@ -1,33 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+<h2>My Heroes</h2>
 
-import { Hero } from '../hero';
-import { HeroService } from '../hero.service';
-import { MessageService } from '../message.service';
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <button [class.selected]="hero === selectedHero" type="button" (click)="onSelect(hero)">
+      <span class="badge">{{hero.id}}</span>
+      <span class="name">{{hero.name}}</span>
+    </button>
+  </li>
+</ul>
 
-@Component({
-  selector: 'app-heroes',
-  templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.css']
-})
-export class HeroesComponent implements OnInit {
-
-  selectedHero?: Hero;
-
-  heroes: Hero[] = [];
-
-  constructor(private heroService: HeroService, private messageService: MessageService) { }
-
-  ngOnInit(): void {
-    this.getHeroes();
-  }
-
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageService.add(`HeroesComponent: Selected hero id=${hero.id}`);
-  }
-
-  getHeroes(): void {
-    this.heroService.getHeroes()
-        .subscribe(heroes => this.heroes = heroes);
-  }
-}
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
