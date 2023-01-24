@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms'; //NgModel imported here
 
 import { AppComponent } from './app.component';
 import { HereosComponent } from './hereos/hereos.component';
@@ -10,7 +11,8 @@ import { HereosComponent } from './hereos/hereos.component';
     HereosComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
