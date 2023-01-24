@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Hero} from '../hero';
 
 @Component({
   selector: 'app-hereos',
@@ -6,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./hereos.component.css']
 })
 export class HereosComponent {
-  hero = 'Windstorm';
+  hero: Hero ={
+    id: 1,
+    name: 'Windstorm'
+  };
 }
